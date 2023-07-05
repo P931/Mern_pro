@@ -6,8 +6,8 @@ const port = process.env.port || 8000
 const BASE_URL = process.env.BASE_URL
 const cors = require("cors")
 const app = express()
-// app.use(cors())
-app.use(cors({ origin: "http://localhost:3000" }))
+app.use(cors())
+// app.use(cors({ origin: "http://localhost:3000" }))
 
 
 
