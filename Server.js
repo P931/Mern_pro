@@ -29,7 +29,8 @@ app.use(function (req, res, next) {
 });
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/userRegistration', {
+mongoose.connect(process.env.MONGO_URL, {
+  // mongoose.connect('mongodb://localhost:27017/userRegistration', {
   UseNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log("Mongodb connected SuccessFully...!!"))
